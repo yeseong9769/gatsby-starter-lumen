@@ -242,13 +242,12 @@ hadoop 사용자로 마스터 노드에 로그인하고 아래 명령을 실행�
 ## 10. MapReduce Wordcount Test
 이제 Hadoop 클러스터가 정상적으로 작동하는지 확인하기 위해 MapReduce Wordcount 예제를 실행합니다. 이 예제는 Hadoop 클러스터에서 Wordcount 작업을 수행합니다. Wordcount.jar 파일은 인터넷에 검색하면 소스코드를 다운로드 받을 수 있습니다.
 
-```console
+```shellsession
 [hadoop@hadoop-master ~]$ hadoop fs -mkdir -p /wordcount/input
 [hadoop@hadoop-master ~]$ hadoop fs -put /usr/local/hadoop/LICENSE.txt /wordcount/input
 [hadoop@hadoop-master ~]$ hadoop jar WordCount.jar com.care.WordCount.WordCount /wordcount/input /wordcount/output
 [hadoop@hadoop-master ~]$ hadoop fs -cat /wordcount/output/part-00000
 ```
-<br>
 
 실행결과는 다음과 같습니다.<br>
 
